@@ -1,7 +1,7 @@
 const { modelNames } = require("../constants");
 
 module.exports.up = (queryInterface, DataTypes) => {
-    return queryInterface.createTable(modelNames["listings-service"].listings, {
+    return queryInterface.createTable(modelNames.listings, {
         id: {
             allowNull: false,
             autoIncrement: true,
@@ -33,4 +33,4 @@ module.exports.up = (queryInterface, DataTypes) => {
     });
 }
 
-module.exports.down = (queryInterface) => queryInterface.dropTable(modelNames["listings-service"].listings);
+module.exports.down = (queryInterface) => queryInterface.dropTable(modelNames.listings);

@@ -1,7 +1,7 @@
 const { modelNames } = require('../constants');
 
 module.exports.up = (queryInterface, DataTypes) => {
-    return queryInterface.createTable(`${modelNames["users-service"].users}`, {
+    return queryInterface.createTable(`${modelNames.users}`, {
         id: {
             allowNull: false,
             primaryKey: true,
@@ -34,4 +34,4 @@ module.exports.up = (queryInterface, DataTypes) => {
 }
 
 
-module.exports.down = (queryInterface) => queryInterface.dropTable(`${modelNames["users-service"].users}`);
+module.exports.down = (queryInterface) => queryInterface.dropTable(`${modelNames.users}`);

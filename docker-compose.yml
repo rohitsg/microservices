@@ -6,6 +6,8 @@ services:
       - listings-service-db
     volumes:
       - ./listings-service:/opt/app
+    ports:
+      - 7100:7100
     environment: 
       - DB_URI=postgresql://root:password@listings-service-db/db?charset=UTF8
   
@@ -24,6 +26,8 @@ services:
       - users-service-db
     volumes:
       - ./users-service:/opt/app
+    ports:
+      - 7101:7101
     environment: 
       - DB_URI=postgresql://root:password@users-service-db/db?charset=UTF8
 

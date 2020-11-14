@@ -1,5 +1,3 @@
 exports.modelNames = {
-    ['listings-service']: {
-        listings: 'listings',
-    }
+    listings: 'listings',
 }

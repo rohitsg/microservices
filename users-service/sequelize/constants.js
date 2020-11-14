@@ -1,6 +1,4 @@
 exports.modelNames = {
-    ['users-service']: {
-        userSessions: 'userSessions',
-        users: 'users',
-    },
+    userSessions: 'userSessions',
+    users: 'users',
 }
