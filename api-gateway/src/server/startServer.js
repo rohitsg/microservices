@@ -5,12 +5,15 @@ import express from 'express';
 
 import accessEnv from '#root/helpers/accessEnv';
 
-import resolvers from '#root/graphql/resolvers'
-import typeDefs from '#root/graphql/typeDefs'
+import resolvers from '#root/graphql/resolvers';
+import typeDefs from '#root/graphql/typeDefs';
+
+import formatGraphqlErrors from "#root/server/formatGraphqlErrors";
 
 const PORT = accessEnv('PORT', 7000);
 
 const apolloServer = new ApolloServer({
+    formatError: formatGraphqlErrors,
     resolvers,
     typeDefs
 })
